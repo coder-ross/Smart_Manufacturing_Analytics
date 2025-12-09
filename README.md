@@ -1,158 +1,106 @@
-\# Smart Manufacturing Analytics
+🚀 Smart Manufacturing Analytics
 
+This project explores a smart manufacturing operations dataset to understand delays, machine performance, energy usage, and overall production efficiency.
+The goal is to transform raw production data into meaningful KPIs and insights to support better planning, maintenance, and decision-making.
 
+📌 Project Objectives
 
-This project analyzes a smart manufacturing job dataset to build operational KPIs and uncover insights about performance, delays, energy usage, and machine efficiency.
+Measure job delays and on-time completion rate
 
+Identify machine-level performance differences and bottlenecks
 
+Analyze production throughput trends over time
 
----
+Study energy consumption patterns and efficiency
 
+Build an interactive Power BI dashboard (in progress)
 
+Document insights for operational improvement
 
-\## 📌 Project Goals
+📁 Dataset Summary
 
+Source: Kaggle — Smart Manufacturing Dataset
 
+Cleaned dataset: data/cleaned_manufacturing_data.csv
 
-\- Evaluate job scheduling efficiency (delays vs on-time completion)
+Total records: ~1000 jobs
 
-\- Analyse machine-level performance and utilization
+📌 Key fields include:
 
-\- Measure throughput trends across time
+Job_ID, Machine_ID, Operation_Type
 
-\- Study energy consumption patterns to identify efficiency opportunities
+Processing_Time, Energy_Consumption
 
-\- Build a Power BI dashboard for interactive reporting
+Scheduled_Start, Actual_Start
 
-\- Document insights for decision-making and optimization
+Job_Status, Optimization_Category
 
+Additional engineered columns:
 
+Delay_Minutes
 
----
+Actual_Processing_Time
 
+Energy_per_Minute
 
+🧠 What’s Done So Far
 
-\## 📁 Dataset
+✔ Loaded and cleaned dataset using Python
+✔ Converted timestamp columns to proper datetime format
+✔ Engineered new calculated fields for insights
+✔ Uploaded cleaned dataset and notebook to repository
+✔ Imported cleaned data into SQL Server
+✔ Wrote 12 analytical SQL queries (KPIs + machine comparisons + trends)
+✔ Generated insights summary based on real results
 
+📄 Insights document: docs/insights_summary.md
+🧾 SQL queries: sql/analysis_queries.sql
 
+📊 Key Findings (Short Version)
 
-\- Source: Kaggle - Smart Manufacturing Dataset
+Nearly half of all jobs experienced delays
 
-\- Cleaned file used in project: `data/cleaned\_manufacturing\_data.csv`
+Average delay ≈ 3.9 minutes per job
 
-\- Rows: ~1000 jobs  
+Machine M05 shows the highest delay and is likely a bottleneck
 
-\- Example fields:  
+Machine M01 is the most efficient based on delay + volume
 
-&nbsp; - `Job\_ID`, `Machine\_ID`, `Operation\_Type`  
+Energy usage correlates strongly with job duration — reducing delays helps control energy waste
 
-&nbsp; - `Processing\_Time`, `Energy\_Consumption`, `Machine\_Availability`  
+More detail available in the insights report.
 
-&nbsp; - `Scheduled\_Start`, `Actual\_Start`, `Job\_Status`
+📈 Power BI Dashboard (In Progress)
 
+Planned dashboard features:
 
+KPI Cards: Total jobs, average delay, on-time %, avg energy
 
----
+Charts:
 
+Delay by machine (bar chart)
 
+Job status breakdown (donut chart)
 
-\## 🛠 Current Progress
+Daily throughput trend (line chart)
 
+Filters: Machine ID + operation type
 
+📁 File location :   powerbi/Smart_Manufacturing_Report.pbix
 
-✔ Loaded and inspected the dataset  
-
-✔ Converted timestamp columns to datetime format  
-
-✔ Handled missing values and formatted data  
-
-✔ Created new calculated fields:
-
-\- `Delay\_Minutes`
-
-\- `Actual\_Processing\_Time`
-
-\- `Energy\_per\_Minute`
-
-
-
-✔ Computed initial KPIs for delay, efficiency, and throughput  
-
-✔ Uploaded cleaned dataset and notebook to GitHub
-
-
-
----
-
-
-
-\## 🚧 Next Steps
-
-
-
-\- Add SQL analytical queries (machine bottlenecks, trends, failures)
-
-\- Build Power BI dashboard (Overview | Machine Utilization | Energy | Trends)
-
-\- Document business insights and summary
-
-\- Add visualizations to `images/` folder
-
-
-
----
-
-
-
-\## 📦 Tech Stack
-
-
-
-| Area | Tools |
-
-|------|-------|
-
-| Data Cleaning | Python (Pandas, NumPy) |
-
-| Analytics | SQL (coming next) |
-
-| Visualization | Power BI |
-
-| Version Control | Git + GitHub |
-
-
-
----
-
-
-
-\## 📈 Final Deliverables (Planned)
-
-
-
-\- 📊 Power BI report  
-
-\- 📁 SQL query collection  
-
-\- 📓 Final notebook with insights  
-
-\- 🧾 Executive summary with KPIs and recommendations  
-
-
-
----
-
-
-
-\## 👤 Author
-
-
-
-\*\*Coder Ross (GitHub: coder-ross)\*\*  
-
-Smart Manufacturing | Data Analytics | Continuous Improvement
-
-
-
-
+🧰 Tech Stack
+Category	Tools
+Data Preparation	Python (Pandas, NumPy)
+Database & Analytics	SQL Server + T-SQL
+Visualization	Power BI (DirectQuery)
+Version Control	Git & GitHub
+📦 Deliverables (Complete + Planned)
+Deliverable	Status
+Cleaned dataset	✔ Done
+Python Jupyter notebook	✔ Done
+SQL query library	✔ Done
+Insights summary	✔ Done
+Power BI report	⏳ In progress
+Final README	🔄 Updating
+👤 Author
 
